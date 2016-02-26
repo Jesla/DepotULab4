@@ -11,14 +11,19 @@ function buttonClick() {
     var divNumber = document.getElementsByClassName("myDiv");
     var divBox = document.createElement("div");
     divBox.className = "myDiv";
+    divNumber.className = "divNum";
     divBox.innerHTML = String(divNumber.length);
-    document.body.appendChild(divBox);  
+    document.body.appendChild(divBox);
+    
+    // function hoverNumber() {
+    // var hovNum = document.getElementsByClassName("myDiv");
+    // hovNum.addEventListener("onmouseover");
+    // document.body.appendChild(divBox);
+    
+    
 }
-
-function hoverNumber() {
-    var hovNum = document.getElementsByClassName()
+    
 }
-
 
 
 
