@@ -11,21 +11,42 @@ function buttonClick() {
     var divNumber = document.getElementsByClassName("myDiv");
     var divBox = document.createElement("div");
     divBox.className = "myDiv";
+    divBox.id = String(divNumber.length);
     divNumber.className = "divNum";
-    divBox.innerHTML = String(divNumber.length);
+    divBox.addEventListener("mouseover", hoverNumber);
     document.body.appendChild(divBox);
+    divBox.addEventListener("mouseout", hoverNumRemove);  
+    document.body.appendChild(divBox);  
+    divBox.addEventListener("click", colorChange);  
+    document.body.appendChild(divBox);  
+    // divBox.addEventListener("dblclick", divRemove);  
+    // document.body.appendChild(divBox);  
     
-    // function hoverNumber() {
-    // var hovNum = document.getElementsByClassName("myDiv");
-    // hovNum.addEventListener("onmouseover");
-    // document.body.appendChild(divBox);
-    
-    
+      
 }
-    
+
+function hoverNumber(e) {
+    e.target.innerHTML = e.target.id;
 }
 
+function hoverNumRemove(e) {
+    e.target.innerHTML = "";    
+}
+
+function colorChange(e) {
+    var divColorGen = (Math.random()*0xFFFFFF<<0).toString(16);
+    e.target.style.backgroundColor = "#" + divColorGen;
+
+}
+
+// function divRemove(e) {
+//     var divRem = 
+// }
 
 
-// assign ids to divs
-// inner html of hte divs
+    
+
+
+//USE THE SAME KIND OF PROCESS FROM THE NUMBER REMOVAL, TO REMOVE THE DIV
+
+//FOR ODD OR EVEN CODE, IF/ELSE FUNCTION
