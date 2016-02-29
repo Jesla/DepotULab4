@@ -6,12 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(mainButton);
         
         var bigDiv = document.createElement("div");
-        bigDiv.className = "mainDiv";
-        document.body.appendChild(bigDiv);        
-        
-     });   
-       
-
+        bigDiv.id = "mainDiv";
+        document.body.appendChild(bigDiv);           
+     });          
 
 function buttonClick() {
     var divNumber = document.getElementsByClassName("myDiv");
@@ -24,23 +21,8 @@ function buttonClick() {
     divBox.addEventListener("mouseout", hoverNumRemove);  
     document.body.appendChild(divBox);  
     divBox.addEventListener("click", colorChange);  
-    document.body.appendChild(divBox);  
-    // divBox.addEventListener("dblclick", divRemove);  
-    // document.body.appendChild(divBox);  
-
-    
-    
+    document.body.appendChild(divBox);     
 }
-
-
-    
-    
-    
-        // document.body.appendTo(mainDiv);
-    
-
-
-
 
 function hoverNumber(e) {
     e.target.innerHTML = e.target.id;
@@ -53,17 +35,10 @@ function hoverNumRemove(e) {
 function colorChange(e) {
     var divColorGen = (Math.random()*0xFFFFFF<<0).toString(16);
     e.target.style.backgroundColor = "#" + divColorGen;
-
 }
 
-// function divRemove(e) {
-//     var divRem = 
-// }
 
-
-    
-
-
-//USE THE SAME KIND OF PROCESS FROM THE NUMBER REMOVAL, TO REMOVE THE DIV
 
 //FOR ODD OR EVEN CODE, IF/ELSE FUNCTION
+    // divBox.addEventListener("dblclick", divRemove);  
+    // document.body.appendChild(divBox);  
