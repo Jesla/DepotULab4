@@ -21,8 +21,8 @@ function buttonClick() {
     divBox.addEventListener("mouseout", hoverNumRemove);  
     document.body.appendChild(divBox);  
     divBox.addEventListener("click", colorChange);  
-    document.body.appendChild(divBox);  //DIV REMOVAL CODE
-    divBox.addEventListener("dblclick", boxRemove); //DIV REMOVAL CODE
+    // document.body.appendChild(divBox);  //DIV REMOVAL CODE
+    // divBox.addEventListener("dblclick", boxRemove); //DIV REMOVAL CODE
     
     var addToMain = document.getElementById('mainDiv');
 	    addToMain.appendChild(divBox);           
@@ -41,15 +41,15 @@ function colorChange(e) {
     e.target.style.backgroundColor = "#" + divColorGen;
 }
 
-function boxRemove() { //THIS WHOLE SECTION IS DIV REMOVAL CODE
-    var divRem = String(divNumber.length);
-    if (divRem % 2 === 0) {
-        var evenRemove = document.getElementsByClassName("myDiv").nextElementSibling;
-        evenRemove.parentNode.removeChild(evenRemove);
-    } else if (divRem % 2 !== 0) {
-        var oddRemove = document.getElementsByClassName("myDiv").previousElementSibling;
-        oddRemove.parentNode.removeChild(oddRemove);
-    } else if (divRem === null) {
-        alert("The box does not exist"); //DOWN TO THIS LINE
-    }
-}
+// function boxRemove() { //THIS WHOLE SECTION IS DIV REMOVAL CODE
+//     var divRem = String(divNumber.length);
+//     if (divRem % 2 === 0) {
+//         var evenRemove = document.getElementsByClassName("myDiv").nextElementSibling;
+//         evenRemove.parentNode.removeChild(evenRemove);
+//     } else if (divRem % 2 !== 0) {
+//         var oddRemove = document.getElementsByClassName("myDiv").previousElementSibling;
+//         oddRemove.parentNode.removeChild(oddRemove);
+//     } else (divRem === null) {
+//         alert("The box does not exist"); //DOWN TO THIS LINE
+//     }
+// }
