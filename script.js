@@ -51,7 +51,7 @@ function boxRemove(e) {
         if (dblClickedSquare.previousElementSibling) {
             dblClickedSquare.previousElementSibling.remove();
         } else {
-            alert("There is not box to remove");
+            alert("There is no box to remove");
         }
     }
 }
