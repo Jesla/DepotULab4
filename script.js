@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-        var mainButton = document.createElement('button');
+        var mainButton = document.createElement("button");
         mainButton.className = "myButton";
         mainButton.innerText = "Click Here!";        
         mainButton.addEventListener("click", buttonClick);        
         document.body.appendChild(mainButton);
         
-});
+        var bigDiv = document.createElement("div");
+        bigDiv.className = "mainDiv";
+        document.body.appendChild(bigDiv);        
+        
+     });   
+       
+
 
 function buttonClick() {
     var divNumber = document.getElementsByClassName("myDiv");
@@ -21,9 +27,20 @@ function buttonClick() {
     document.body.appendChild(divBox);  
     // divBox.addEventListener("dblclick", divRemove);  
     // document.body.appendChild(divBox);  
+
     
-      
+    
 }
+
+
+    
+    
+    
+        // document.body.appendTo(mainDiv);
+    
+
+
+
 
 function hoverNumber(e) {
     e.target.innerHTML = e.target.id;
