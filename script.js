@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         var bigDiv = document.createElement("div");
         bigDiv.id = "mainDiv";
-        document.body.appendChild(bigDiv);           
+        document.body.appendChild(bigDiv);        
      });          
 
 function buttonClick() {
@@ -21,8 +21,12 @@ function buttonClick() {
     divBox.addEventListener("mouseout", hoverNumRemove);  
     document.body.appendChild(divBox);  
     divBox.addEventListener("click", colorChange);  
-    document.body.appendChild(divBox);     
+    document.body.appendChild(divBox);  
+    
+    var addToMain = document.getElementById('mainDiv');
+	    addToMain.appendChild(divBox);   
 }
+
 
 function hoverNumber(e) {
     e.target.innerHTML = e.target.id;
